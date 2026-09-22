@@ -9,15 +9,15 @@ OBJS = $(SRCS:.c=.o) # replace .c with .o
 lib50.a: $(OBJS)
 	$(AR) $(ARFLAGS) $@ $(OBJS)
 
-src/intops.o: include/lib50/intops.h
+src/strconv.o: include/lib50/strconv.h
 
-test: tests/test_intops
-	./tests/test_intops
+test: tests/test_strconv
+	./tests/test_strconv
 
-tests/test_intops: tests/test_intops.c lib50.a
-	$(CC) $(CFLAGS) -o $@ tests/test_intops.c lib50.a
+tests/test_strconv: tests/test_strconv.c lib50.a
+	$(CC) $(CFLAGS) -o $@ tests/test_strconv.c lib50.a
 
 clean:
-	rm -f lib50.a src/*.o tests/test_intops
+	rm -f lib50.a src/*.o tests/test_strconv
 
 .PHONY: test clean

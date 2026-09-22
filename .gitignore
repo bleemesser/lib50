@@ -1,5 +1,5 @@
 *.o
 *.a
-tests/test_intops
+tests/test_strconv
 *~
 .DS_Store
