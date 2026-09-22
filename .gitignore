@@ -1,0 +1,5 @@
+*.o
+*.a
+tests/test_intops
+*~
+.DS_Store

@@ -1,0 +1,53 @@
+# CS50 C style: K&R/Linux derived, 4-space indent, 80 columns.
+Language: Cpp
+BasedOnStyle: LLVM
+
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+ContinuationIndentWidth: 4
+ColumnLimit: 80
+
+# opening brace at end of line, functions included
+BreakBeforeBraces: Attach
+
+# never collapse a block onto one line, braces required everywhere
+AllowShortBlocksOnASingleLine: false
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: None
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+InsertBraces: true
+
+# one statement per line
+BinPackArguments: true
+BinPackParameters: true
+AllowAllArgumentsOnNextLine: false
+AllowAllParametersOfDeclarationOnNextLine: false
+
+# char *linep, not char* linep
+PointerAlignment: Right
+DerivePointerAlignment: false
+
+# space after keywords, not after function names
+SpaceBeforeParens: ControlStatements
+SpaceAfterCStyleCast: false
+SpaceBeforeAssignmentOperators: true
+SpacesInParentheses: false
+SpacesInSquareBrackets: false
+SpaceBeforeSquareBrackets: false
+SpacesBeforeTrailingComments: 2
+
+AlignTrailingComments: true
+AlignAfterOpenBracket: Align
+AlignEscapedNewlines: Left
+AlignOperands: true
+
+IndentCaseLabels: false
+IndentPPDirectives: None
+KeepEmptyLinesAtTheStartOfBlocks: false
+MaxEmptyLinesToKeep: 1
+
+# leave include order and block comment markup alone
+SortIncludes: false
+ReflowComments: false
