@@ -1,5 +1,5 @@
 # CS50 C style: K&R/Linux derived, 4-space indent, 80 columns.
-Language: Cpp
+Language: C
 BasedOnStyle: LLVM
 
 IndentWidth: 4
@@ -48,6 +48,14 @@ IndentPPDirectives: None
 KeepEmptyLinesAtTheStartOfBlocks: false
 MaxEmptyLinesToKeep: 1
 
-# leave include order and block comment markup alone
-SortIncludes: false
-ReflowComments: false
+# project headers ("") first, then system headers (<>), each block sorted
+SortIncludes: CaseSensitive
+IncludeBlocks: Regroup
+IncludeCategories:
+  - Regex: '^"'
+    Priority: 1
+  - Regex: '^<'
+    Priority: 2
+
+# trim comment trailing spaces but never rewrap
+ReflowComments: IndentOnly
