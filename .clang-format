@@ -1,4 +1,3 @@
-# CS50 C style: K&R/Linux derived, 4-space indent, 80 columns.
 Language: C
 BasedOnStyle: LLVM
 
